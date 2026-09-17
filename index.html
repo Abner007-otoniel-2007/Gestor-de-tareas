@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <link rel="stylesheet" href="/src/diseño.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Tareas</title>
+  </head>
+  <body>
+    <h1>Gestor de Tareas</h1>
+
+    <form id="form-tarea">
+      <input type="hidden" id="tarea-id" value="" />
+
+      <label>Título:</label>
+      <input type="text" id="titulo" required />
+      <br />
+
+      <label>Descripción:</label>
+      <textarea id="descripcion"></textarea>
+      <br />
+
+      <label>Categoría:</label>
+      <input type="text" id="categoria" />
+      <br />
+
+      <label>Prioridad:</label>
+      <select id="prioridad">
+        <option value="alta">Alta</option>
+        <option value="media" selected>Media</option>
+        <option value="baja">Baja</option>
+      </select>
+      <br />
+
+      <button type="submit" id="btn-guardar">Agregar Tarea</button>
+    </form>
+
+    <hr />
+
+    <label>Buscar por título:</label>
+    <input type="text" id="buscar" placeholder="Escribe para buscar..." />
+
+    <br />
+
+    <label>Filtrar por estado:</label>
+    <select id="filtro-estado">
+      <option value="todas">Todas</option>
+      <option value="pendientes">Pendientes</option>
+      <option value="completadas">Completadas</option>
+    </select>
+
+    <label>Filtrar por prioridad:</label>
+    <select id="filtro-prioridad">
+      <option value="todas">Todas</option>
+      <option value="alta">Alta</option>
+      <option value="media">Media</option>
+      <option value="baja">Baja</option>
+    </select>
+
+    <hr />
+
+    <ul id="lista-tareas"></ul>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
